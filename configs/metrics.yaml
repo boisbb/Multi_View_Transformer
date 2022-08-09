@@ -1,0 +1,25 @@
+# @package _global_
+
+# specify here default evaluation configuration
+defaults:
+  - _self_
+  - datamodule: modelnet.yaml # choose the datamodule for evaluation
+  - model: mvt.yaml
+  - callbacks: null
+  - log_dir: evaluation.yaml
+  # enable color logging
+  - override hydra/hydra_logging: colorlog
+  - override hydra/job_logging: colorlog
+
+original_work_dir: ${hydra:runtime.cwd}
+
+#can be either cpu or cuda
+device: "cuda"
+
+data_dir: ${original_work_dir}/data/
+
+# passing checkpoint path is necessary
+ckpt_path: path/to/model
+
+#
+name: "metrics"
