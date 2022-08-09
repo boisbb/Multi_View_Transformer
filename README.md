@@ -2,7 +2,7 @@
 
 ## Overview
 
-This an open-source implementation of the work achieved by [Chen et al.](https://arxiv.org/abs/2110.13083)
+This an open-source implementation of a method for 3D model attention based classification proposed by [Chen et al.](https://arxiv.org/abs/2110.13083)
 
 
 ## How to install dependencies
